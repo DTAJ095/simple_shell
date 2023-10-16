@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * addRvarNode - adds a variable at the end
+ * add_var_node - adds a variable at the end
  * @head: head of the linked list.
  * @lvar: length of the variable.
  * @var: value of the variable.
@@ -38,9 +38,9 @@ r_var *add_var_node(r_var **head, int len_var, char *var, int len_val)
 }
 
 /**
- * freeRvarList - frees a r_var list
+ * free_var_list - frees a r_var list
  * @head: head of the linked list.
- * Return: no return.
+ * Return: nothing.
  */
 void free_var_list(r_var **head)
 {

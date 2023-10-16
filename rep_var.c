@@ -3,7 +3,7 @@
 /**
  * checkEnv - checks if the typed variable is an env variable
  *
- * @h: head of linked list
+ * @head: head of linked list
  * @in: input string
  * @data: data structure
  * Return: no return
@@ -40,13 +40,13 @@ void checkEnv(r_var **head, char *input, data_shell *data)
 
 /**
  * checkVars - check if the typed variable is $$ or $?
- * @h: head of the linked list
+ * @head: head of the linked list
  * @in: input string
  * @st: last status of the Shell
  * @data: data structure
  * Return: no return
  */
-int checkVars(r_var **h, char *in, char *st, data_shell *data)
+int checkVars(r_var **head, char *in, char *st, data_shell *data)
 {
 	int i, lst, lpd;
 
@@ -58,21 +58,21 @@ int checkVars(r_var **h, char *in, char *st, data_shell *data)
 		if (in[i] == '$')
 		{
 			if (in[i + 1] == '?')
-				add_var_node(h, 2, st, lst), i++;
+				add_var_node(head, 2, st, lst), i++;
 			else if (in[i + 1] == '$')
-				add_var_node(h, 2, data->pid, lpd), i++;
+				add_var_node(head, 2, data->pid, lpd), i++;
 			else if (in[i + 1] == '\n')
-				add_var_node(h, 0, NULL, 0);
+				add_var_node(head, 0, NULL, 0);
 			else if (in[i + 1] == '\0')
-				add_var_node(h, 0, NULL, 0);
+				add_var_node(head, 0, NULL, 0);
 			else if (in[i + 1] == ' ')
-				add_var_node(h, 0, NULL, 0);
+				add_var_node(head, 0, NULL, 0);
 			else if (in[i + 1] == '\t')
-				add_var_node(h, 0, NULL, 0);
+				add_var_node(head, 0, NULL, 0);
 			else if (in[i + 1] == ';')
-				add_var_node(h, 0, NULL, 0);
+				add_var_node(head, 0, NULL, 0);
 			else
-				checkEnv(h, in + i, data);
+				checkEnv(head, in + i, data);
 		}
 	}
 	return (i);
@@ -84,16 +84,16 @@ int checkVars(r_var **h, char *in, char *st, data_shell *data)
  * @head: head of the linked list
  * @input: input string
  * @new_input: new input string (replaced)
- * @nlen: new length
+ * @new_len: new length
  * Return: replaced string
  */
-char *replacedInput(r_var **head, char *input, char *new_input, int nlen)
+char *replacedInput(r_var **head, char *input, char *new_input, int new_len)
 {
 	r_var *indx;
 	int i, j, k;
 
 	indx = *head;
-	for (j = i = 0; i < nlen; i++)
+	for (j = i = 0; i < new_len; i++)
 	{
 		if (input[j] == '$')
 		{

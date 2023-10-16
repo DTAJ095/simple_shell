@@ -1,28 +1,28 @@
 #include "shell.h"
 
 /**
- * bring_line - assigns the line var for get_line
+ * bring_line - assigns a variable line for get_line
  * @lineptr: Buffer that store the input str
  * @buffer: str that is been called to line
  * @n: size of line
- * @j: size of buffer
+ * @buff: size of buffer
  */
-void bring_line(char **lineptr, size_t *n, char *buffer, size_t j)
+void bring_line(char **lineptr, size_t *n, char *buffer, size_t buff)
 {
 
 	if (*lineptr == NULL)
 	{
-		if  (j > BUFSIZE)
-			*n = j;
+		if  (buff > BUFSIZE)
+			*n = buff;
 
 		else
 			*n = BUFSIZE;
 		*lineptr = buffer;
 	}
-	else if (*n < j)
+	else if (*n < buff)
 	{
-		if (j > BUFSIZE)
-			*n = j;
+		if (buff > BUFSIZE)
+			*n = buff;
 		else
 			*n = BUFSIZE;
 		*lineptr = buffer;

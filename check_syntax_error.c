@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * repeatedChar - counts the repetitions of a char
- *
+ * repeated_char - counts the number of appearance
+ * of a character
  * @input: input string
- * @i: index
+ * @idx: index
  * Return: repetitions
  */
 int repeated_char(char *input, int idx)
@@ -16,11 +16,11 @@ int repeated_char(char *input, int idx)
 }
 
 /**
- * errorSepOp - finds syntax errors
+ * error_sep - finds syntax errors
  *
  * @input: input string
- * @i: index
- * @last: last char read
+ * @idx: index
+ * @last: last character readed
  * Return: index of error. 0 when there are no
  * errors
  */
@@ -69,7 +69,7 @@ int error_sep(char *input, int idx, char last)
 }
 
 /**
- * firstChar - finds index of the first char
+ * first_char - finds index of the first char
  *
  * @input: input string
  * @idx: index

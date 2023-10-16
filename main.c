@@ -53,18 +53,18 @@ void set_data(data_shell *datash, char **av)
 /**
  * main - Entry point
  *
- * @ac: argument count
- * @av: argument vector
+ * @argc: argument count
+ * @argv: array contaning the command line arguments
  *
  * Return: 0 on success.
  */
-int main(int ac, char **av)
+int main(int argc, char **argv)
 {
 	data_shell datash;
-	(void) ac;
+	(void) argc;
 
 	signal(SIGINT, getSigint);
-	set_data(&datash, av);
+	set_data(&datash, argv);
 	shellLoop(&datash);
 	free_data(&datash);
 	if (datash.status < 0)

@@ -146,13 +146,13 @@ int split_commands(data_shell *datash, char *input);
 char **split_line(char *input);
 
 /* rep_var.c */
-void checkEnv(r_var **h, char *in, data_shell *data);
-int checkVars(r_var **h, char *in, char *st, data_shell *data);
-char *replacedInput(r_var **head, char *input, char *new_input, int nlen);
+void checkEnv(r_var **head, char *input, data_shell *data);
+int checkVars(r_var **head, char *in, char *st, data_shell *data);
+char *replacedInput(r_var **head, char *input, char *new_input, int new_len);
 char *rep_var(char *input, data_shell *datash);
 
 /* get_line.c */
-void bring_line(char **lineptr, size_t *n, char *buffer, size_t j);
+void bring_line(char **lineptr, size_t *n, char *buffer, size_t buff);
 ssize_t get_line(char **lineptr, size_t *n, FILE *stream);
 
 /* exec_line */

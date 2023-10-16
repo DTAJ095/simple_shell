@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * auxHelp - Help information for the builtin help.
+ * help - Help information for the builtin help.
  * Return: no return
  */
 void help(void)
@@ -15,7 +15,7 @@ void help(void)
 	write(STDOUT_FILENO, help, _strlen(help));
 }
 /**
- * auxHelpAlias - Help information for the builtin alias.
+ * help_alias - Help information for the builtin alias.
  * Return: no return
  */
 void help_alias(void)
@@ -27,7 +27,7 @@ void help_alias(void)
 	write(STDOUT_FILENO, help, _strlen(help));
 }
 /**
- * auxHelpCd - Help information for the builtin alias.
+ * help_cd - Help information for the builtin alias.
  * Return: no return
  */
 void help_cd(void)
