@@ -154,20 +154,20 @@ void printSyntaxError(data_shell *datash, char *input, int idx, int boolean)
  */
 int checkSyntaxError(data_shell *datash, char *input)
 {
-	int begin = 0;
+	int start = 0;
 	int f_char = 0;
 	int i = 0;
 
-	f_char = first_char(input, &begin);
+	f_char = first_char(input, &start);
 	if (f_char == -1)
 	{
-		printSyntaxError(datash, input, begin, 0);
+		printSyntaxError(datash, input, start, 0);
 		return (1);
 	}
-	i = error_sep(input + begin, 0, *(input + begin));
+	i = error_sep(input + start, 0, *(input + start));
 	if (i != 0)
 	{
-		printSyntaxError(datash, input, begin + i, 1);
+		printSyntaxError(datash, input, start + i, 1);
 		return (1);
 	}
 	return (0);
