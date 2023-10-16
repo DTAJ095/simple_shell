@@ -69,7 +69,7 @@ int error_sep(char *input, int idx, char last)
 }
 
 /**
- * first_char - finds index of the first char
+ * first_char - finds index of the first character
  *
  * @input: input string
  * @idx: index
@@ -93,7 +93,7 @@ int first_char(char *input, int *idx)
 }
 
 /**
- * printSyntaxError - prints when a syntax error is found
+ * printSyntaxError - prints message when a syntax error is found
  *
  * @datash: data structure
  * @input: input string
@@ -146,8 +146,7 @@ void printSyntaxError(data_shell *datash, char *input, int idx, int boolean)
 }
 
 /**
- * checkSyntaxError - intermediate function to
- * find and print a syntax error
+ * checkSyntaxError - function to find and print a syntax error
  *
  * @datash: data structure
  * @input: input string
