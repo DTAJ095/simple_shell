@@ -135,25 +135,25 @@ int _isdigit(const char *str)
  */
 void rev_string(char *str)
 {
-	int count = 0, i, j;
-	char *r_str, temp;
+	int i = 0, j, right;
 
-	while (count >= 0)
+	while (str[i] != '\0')
 	{
-		if (str[count] == '\0')
-			break;
-		count++;
+		i++;
 	}
-	r_str = str;
 
-	for (i = 0; i < (count - 1); i++)
+	j = i / 2;
+	right = 0;
+
+	while (right != j)
 	{
-		for (j = i + 1; j > 0; j--)
-		{
-			temp = *(r_str + j);
-			*(r_str + j) = *(r_str + (j - 1));
-			*(r_str + (j - 1)) = temp;
-		}
+		char tmp = str[right];
+		int left = i - right - 1;
+
+		str[right] = str[left];
+		str[left] = tmp;
+
+		right++;
 	}
 }
 
