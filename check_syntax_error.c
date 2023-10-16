@@ -103,28 +103,28 @@ int first_char(char *input, int *idx)
  */
 void printSyntaxError(data_shell *datash, char *input, int idx, int boolean)
 {
-	char *msg, *msg2, *msg3, *error, *counter;
+	char *msg1, *msg2, *msg3, *error, *counter;
 	int length;
 
 	if (input[idx] == ';')
 	{
 		if (boolean == 0)
-			msg = (input[idx + 1] == ';' ? ";;" : ";");
+			msg1 = (input[idx + 1] == ';' ? ";;" : ";");
 		else
-			msg = (input[idx - 1] == ';' ? ";;" : ";");
+			msg1 = (input[idx - 1] == ';' ? ";;" : ";");
 	}
 
 	if (input[idx] == '|')
-		msg = (input[idx + 1] == '|' ? "||" : "|");
+		msg1 = (input[idx + 1] == '|' ? "||" : "|");
 
 	if (input[idx] == '&')
-		msg = (input[idx + 1] == '&' ? "&&" : "&");
+		msg1 = (input[idx + 1] == '&' ? "&&" : "&");
 
 	msg2 = ": Syntax error: \"";
 	msg3 = "\" unexpected\n";
 	counter = auxItoa(datash->counter);
 	length = _strlen(datash->av[0]) + _strlen(counter);
-	length += _strlen(msg) + _strlen(msg2) + _strlen(msg3) + 2;
+	length += _strlen(msg1) + _strlen(msg2) + _strlen(msg3) + 2;
 
 	error = malloc(sizeof(char) * (length + 1));
 	if (error == 0)
@@ -136,7 +136,7 @@ void printSyntaxError(data_shell *datash, char *input, int idx, int boolean)
 	_strcat(error, ": ");
 	_strcat(error, counter);
 	_strcat(error, msg2);
-	_strcat(error, msg);
+	_strcat(error, msg1);
 	_strcat(error, msg3);
 	_strcat(error, "\0");
 
