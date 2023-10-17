@@ -9,7 +9,7 @@
 int cdShell(data_shell *datash)
 {
 	char *dir;
-	int ishome, ishome2, isddash;
+	int ishome, ishome2, isdash;
 
 	dir = datash->args[1];
 
@@ -17,10 +17,10 @@ int cdShell(data_shell *datash)
 	{
 		ishome = _strcmp("$HOME", dir);
 		ishome2 = _strcmp("~", dir);
-		isddash = _strcmp("--", dir);
+		isdash = _strcmp("--", dir);
 	}
 
-	if (dir == NULL || !ishome || !ishome2 || !isddash)
+	if (dir == NULL || !ishome || !ishome2 || !isdash)
 	{
 		cdToHome(datash);
 		return (1);
