@@ -3,9 +3,9 @@
 /**
  * add_var_node - adds a variable at the end
  * @head: head of the linked list.
- * @lvar: length of the variable.
+ * @len_var: length of the variable.
  * @var: value of the variable.
- * @lval: length of the value.
+ * @len_val: length of the value.
  * Return: address of the head.
  */
 r_var *add_var_node(r_var **head, int len_var, char *var, int len_val)
