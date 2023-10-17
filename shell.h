@@ -171,7 +171,7 @@ int _env(data_shell *datash);
 /* env2.c */
 char *copy_info(char *name, char *value);
 void set_env(char *name, char *value, data_shell *datash);
-int _setenv(data_shell *datash);
+int _cmpenv(data_shell *datash);
 int _unsetenv(data_shell *datash);
 
 /* get_dir.c */

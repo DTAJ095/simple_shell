@@ -64,7 +64,7 @@ void set_env(char *name, char *value, data_shell *datash)
  *
  * Return: 1 on success.
  */
-int _setenv(data_shell *datash)
+int _cmpenv(data_shell *datash)
 {
 
 	if (datash->args[1] == NULL || datash->args[2] == NULL)
