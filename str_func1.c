@@ -63,8 +63,8 @@ int _strcmp(char *s1, char *s2)
 }
 /**
  * _strchr - locates a character in a string,
- * @s: string.
- * @c: character.
+ * @str: string.
+ * @chr: character.
  * Return: the pointer to the first occurrence of the character c.
  */
 char *_strchr(char *str, char chr)
@@ -80,7 +80,7 @@ char *_strchr(char *str, char chr)
 }
 /**
  * _strspn - gets the length of a prefix substring.
- * @s: initial segment.
+ * @str: initial segment.
  * @accept: accepted bytes.
  * Return: the number of accepted bytes.
  */
