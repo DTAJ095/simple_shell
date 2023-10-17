@@ -2,10 +2,9 @@
 
 /**
  * checkEnv - checks if the typed variable is an env variable
- *
  * @head: head of linked list
- * @in: input string
  * @data: data structure
+ * @input: input
  * Return: no return
  */
 void checkEnv(r_var **head, char *input, data_shell *data)
@@ -32,7 +31,10 @@ void checkEnv(r_var **head, char *input, data_shell *data)
 	}
 	for (j = 0; input[j]; j++)
 	{
-		if (input[j] == ' ' || input[j] == '\t' || input[j] == ';' || input[j] == '\n')
+		if (input[j] == ' ' ||
+input[j] == '\t' ||
+input[j] == ';' ||
+input[j] == '\n')
 			break;
 	}
 	add_var_node(head, j, NULL, 0);
