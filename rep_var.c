@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * checkEnv - checks if the typed variable is an env variable
- * @head: head of linked list
- * @data: data structure
- * @input: input
+ * checkEnv - checks if the typed variable is an env variable.
+ * @head: head of linked list.
+ * @data: data structure.
+ * @input: input.
  * Return: no return
  */
 void checkEnv(r_var **head, char *input, data_shell *data)
@@ -42,11 +42,11 @@ input[j] == '\n')
 
 /**
  * checkVars - check if the typed variable is $$ or $?
- * @head: head of the linked list
- * @in: input string
- * @st: last status of the Shell
- * @data: data structure
- * Return: no return
+ * @head: head of the linked list.
+ * @in: input string.
+ * @st: last status of the Shell.
+ * @data: data structure.
+ * Return: no return.
  */
 int checkVars(r_var **head, char *in, char *st, data_shell *data)
 {
