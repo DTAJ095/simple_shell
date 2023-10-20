@@ -1,4 +1,4 @@
-                                       SIMPLE_SHELL
+#############################   SIMPLE_SHELL ###################################
 The Simple Shell Project was successfully executed using the C programming language with the assistance of the Shell Betty linter.
 
 General Project Requirements:
