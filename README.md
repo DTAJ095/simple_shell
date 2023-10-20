@@ -10,8 +10,9 @@ The Betty style guidelines were adhered to and verified using betty-style.pl and
 The shell was meticulously crafted to prevent memory leaks.
 Each source code file was limited to no more than five functions.
 All header files were protected with include guards.
-Project Description:
 
+Project Description:
+--------------------
 The 'hsh' is a minimalist UNIX command language interpreter designed to read and execute commands from both files and standard input.
 
 Functionality of 'hsh':
