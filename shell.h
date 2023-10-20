@@ -108,6 +108,8 @@ char *_strcpy(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
 char *_strchr(char *str, char chr);
 int _strspn(char *str, char *accept);
+char *_strncpy(char *dest, char *src, int n);
+char *_strncat(char *dest, char *src, int n);
 
 /* str_func2.c */
 char *_strdup(const char *str);
